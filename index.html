@@ -6,6 +6,7 @@
     <script type="text/javascript" src="lib/Bacon.js"></script>
     <script type="text/javascript" src="lib/Bacon.UI.js"></script>
     <script type="text/javascript" src="mocks.js"></script>
+    <script src="app.js"></script>
     <script type="text/javascript">
       function nonEmpty(x) { return x.length > 0 }
       function setVisibility(element, visible) {
@@ -16,12 +17,12 @@
       }
       $(function() {
           $(".ajax").hide()
-          usernameField = $("#username input")
-          fullnameField = $("#fullname input")
-          registerButton = $("#register button")
-          unavailabilityLabel = $("#username-unavailable")
-          usernameAjaxIndicator = $("#username .ajax")
-          registerAjaxIndicator = $("#register .ajax")
+          usernameField = $("#username input");
+          fullnameField = $("#fullname input");
+          registerButton = $("#register button");
+          unavailabilityLabel = $("#username-unavailable");
+          usernameAjaxIndicator = $("#username .ajax");
+          registerAjaxIndicator = $("#register .ajax");
       })
     </script>
   </head>
@@ -42,5 +43,11 @@
         <span id="result"></span>
       </div>
     </form>
+    
+    <script>
+        $(function () {
+            App.init();
+        })
+    </script>
   </body>
 </html>
